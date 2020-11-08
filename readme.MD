@@ -13,7 +13,7 @@ Make controller:
 php bin/console make:controller MakeController
 ```
 
-###annotation example:
+### annotation example:
 
 ```
 without parameters:
