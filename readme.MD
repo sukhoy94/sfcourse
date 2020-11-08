@@ -1,3 +1,5 @@
+certification - https://thomasberends.github.io/symfony-certification-preparation-list/
+
 ### Useful snippets:
 
 ## bin/console
