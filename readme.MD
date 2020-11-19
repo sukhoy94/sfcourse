@@ -1,4 +1,5 @@
 certification - https://thomasberends.github.io/symfony-certification-preparation-list/
+phpstan: https://phpstan.org/
 
 ### Useful snippets:
 
