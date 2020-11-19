@@ -8,7 +8,7 @@ certification - https://thomasberends.github.io/symfony-certification-preparatio
 Maker bundle:
 composer require symfony/maker-bundle --dev
 
-annotations:
+Annotations:
 composer require doctrine/annotations
 
 Make controller:
@@ -34,3 +34,9 @@ with parameter:
  */
 
 ```
+
+## phpstan
+
+``
+vendor\bin\phpstan analyse -l 8 src
+``
