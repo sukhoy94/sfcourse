@@ -43,7 +43,7 @@ with parameter:
 vendor\bin\phpstan analyse -l 8 src
 ``
 
-## twig
+## TWIG
 
 - extend a template
 ```
@@ -61,4 +61,18 @@ vendor\bin\phpstan analyse -l 8 src
 
 ```
 {{ path($routeName, {paramnane: paramvalue}) }}
+```
+
+## Doctrine
+
+```
+php bin/console make:entity
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+$post = new Post();
+$post->setTitle('Firts post');
+$em = $this->getDoctrine()->getManager();
+$em->persist($post);
+$em->flush();
 ```
