@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="345ba423-cfd4-4453-ae3f-c3d30184f022" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sfcourse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sfcourse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/readme.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +96,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -134,7 +128,9 @@
       <workItem from="1605167945653" duration="384000" />
       <workItem from="1605812432720" duration="4063000" />
       <workItem from="1605859029974" duration="18000" />
-      <workItem from="1606037257582" duration="5215000" />
+      <workItem from="1606037257582" duration="5999000" />
+      <workItem from="1606118200451" duration="369000" />
+      <workItem from="1606642999064" duration="1025000" />
     </task>
     <servers />
   </component>
@@ -146,16 +142,20 @@
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="910" y="428" key="#Inspections/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605813488546" />
+    <state x="872" y="398" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606643212556">
+      <screen x="0" y="40" width="2560" height="1400" />
+    </state>
+    <state x="872" y="398" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1606643212556" />
     <state x="1026" y="584" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605813489255">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="1026" y="584" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605813489255" />
-    <state x="1060" y="495" key="FileChooserDialogImpl" timestamp="1605859046413">
+    <state x="1060" y="495" key="FileChooserDialogImpl" timestamp="1606118565761">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.144.1536.824@0.40.2560.1400" timestamp="1605168331300" />
     <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.257.1536.824@0.40.2560.1400" timestamp="1604908991244" />
-    <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605859046413" />
+    <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1606118565761" />
     <state x="1092" y="462" key="NewPhpClassDialog" timestamp="1604850073920">
       <screen x="0" y="40" width="2560" height="1400" />
     </state>
