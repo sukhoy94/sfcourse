@@ -43,4 +43,18 @@ class PostController extends AbstractController
         
         return new Response("Post created");
     }
+    
+    /**
+     * @Route ("/show/{id}")
+     * @param $id
+     * @param PostRepository $postRepository
+     */
+    public function show($id, PostRepository $postRepository) 
+    {
+        $post = $postRepository->find($id);
+        
+        return $this->render('post/show.html.twig', [
+            'post' => $post,
+        ]);
+    }
 }
