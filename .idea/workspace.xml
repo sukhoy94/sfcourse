@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="345ba423-cfd4-4453-ae3f-c3d30184f022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/readme.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,44 +133,13 @@
       <workItem from="1605859029974" duration="18000" />
       <workItem from="1606037257582" duration="5999000" />
       <workItem from="1606118200451" duration="369000" />
-      <workItem from="1606642999064" duration="2228000" />
+      <workItem from="1606642999064" duration="2854000" />
+      <workItem from="1606723278184" duration="409000" />
+      <workItem from="1607256498540" duration="1519000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="910" y="428" key="#Inspections" timestamp="1605813488546">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="910" y="428" key="#Inspections/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605813488546" />
-    <state x="872" y="398" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606643212556">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="872" y="398" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1606643212556" />
-    <state x="1026" y="584" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605813489255">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="1026" y="584" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605813489255" />
-    <state x="1060" y="495" key="FileChooserDialogImpl" timestamp="1606118565761">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.144.1536.824@0.40.2560.1400" timestamp="1605168331300" />
-    <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.257.1536.824@0.40.2560.1400" timestamp="1604908991244" />
-    <state x="1060" y="495" key="FileChooserDialogImpl/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1606118565761" />
-    <state x="1092" y="462" key="NewPhpClassDialog" timestamp="1604850073920">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="1092" y="462" key="NewPhpClassDialog/0.40.2560.1400/2560.257.1536.824@0.40.2560.1400" timestamp="1604850073920" />
-    <state x="781" y="384" key="SettingsEditor" timestamp="1606041859107">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="781" y="384" key="SettingsEditor/0.40.2560.1400/2560.257.1536.824@0.40.2560.1400" timestamp="1604850123766" />
-    <state x="781" y="384" key="SettingsEditor/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1606041859107" />
-    <state x="943" y="355" key="search.everywhere.popup" timestamp="1605815164456">
-      <screen x="0" y="40" width="2560" height="1400" />
-    </state>
-    <state x="943" y="355" key="search.everywhere.popup/0.40.2560.1400/2560.379.1536.824@0.40.2560.1400" timestamp="1605815164456" />
   </component>
 </project>

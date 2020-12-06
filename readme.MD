@@ -16,6 +16,9 @@ composer require doctrine/annotations
 Make controller:
 php bin/console make:controller MakeController
 
+Shpw route list
+php bin/console debug:router
+
 ```
 
 ## annotation example:

@@ -11,12 +11,12 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class PostController
  * @package App\Controller
- * @Route ("/post", name="post")
+ * @Route ("/posts", name="posts")
  */
 class PostController extends AbstractController
 {
     /**
-     * @Route("/", name="post.")
+     * @Route("/", name=".index")
      */
     public function index(PostRepository $postRepository): Response
     {
@@ -48,8 +48,9 @@ class PostController extends AbstractController
      * @Route ("/show/{id}")
      * @param $id
      * @param PostRepository $postRepository
+     * @return Response
      */
-    public function show($id, PostRepository $postRepository) 
+    public function show($id, PostRepository $postRepository): Response
     {
         $post = $postRepository->find($id);
         
@@ -57,4 +58,18 @@ class PostController extends AbstractController
             'post' => $post,
         ]);
     }
+    
+    /**
+     * @Route ("/delete/{id}")
+     * @param Post $post
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function delete(Post $post): \Symfony\Component\HttpFoundation\RedirectResponse
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($post);
+        $entityManager->flush();
+        
+        return $this->redirect($this->generateUrl('posts.index'));
+    }   
 }
