@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Post;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -29,7 +30,7 @@ class PostController extends AbstractController
     }
     
     /**
-     * @Route ("/create", name="create")
+     * @Route ("/create", name=".create")
      * @return Response
      */
     public function create(): Response
@@ -45,7 +46,7 @@ class PostController extends AbstractController
     }
     
     /**
-     * @Route ("/show/{id}")
+     * @Route ("/show/{id}", name=".show")
      * @param $id
      * @param PostRepository $postRepository
      * @return Response
@@ -60,11 +61,11 @@ class PostController extends AbstractController
     }
     
     /**
-     * @Route ("/delete/{id}")
+     * @Route ("/delete/{id}", name=".delete")
      * @param Post $post
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @return RedirectResponse
      */
-    public function delete(Post $post): \Symfony\Component\HttpFoundation\RedirectResponse
+    public function delete(Post $post): RedirectResponse
     {
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->remove($post);
