@@ -71,6 +71,8 @@ class PostController extends AbstractController
         $entityManager->remove($post);
         $entityManager->flush();
         
+        $this->addFlash('success', 'Post was successfully removed');
+        
         return $this->redirect($this->generateUrl('posts.index'));
     }   
 }
