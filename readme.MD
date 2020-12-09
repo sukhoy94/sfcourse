@@ -79,3 +79,8 @@ $em = $this->getDoctrine()->getManager();
 $em->persist($post);
 $em->flush();
 ```
+
+## Forms
+```
+php bin/console make:form
+```
