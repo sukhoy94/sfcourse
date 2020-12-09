@@ -82,5 +82,42 @@ $em->flush();
 
 ## Forms
 ```
-php bin/console make:form
+php bin/console make:form - create Form class
+
+-------------------- in controller -----------------------------
+
+$post = new Post();
+$form = $this->createForm(PostType::class, $post);
+$form->handleRequest($request);
+
+if ($form->isSubmitted()) {
+    $entityManager = $this->getDoctrine()->getManager();
+    $entityManager->persist($post);
+    $entityManager->flush();
+    
+    return $this->redirect($this->generateUrl('posts.index'));
+}
+
+return $this->render('post/create.html.twig', [
+    'form' => $form->createView(),
+]);
+------------------------------------------------------------------
+
+------------------ iu form class ---------------------------------
+
+public function buildForm(FormBuilderInterface $builder, array $options)
+{
+    $builder
+        ->add('title')
+        ->add('save', SubmitType::class)
+    ;
+}
+
+public function configureOptions(OptionsResolver $resolver)
+{
+    $resolver->setDefaults([
+        'data_class' => Post::class,
+    ]);
+}
+------------------------------------------------------------------
 ```
