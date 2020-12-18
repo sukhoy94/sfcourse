@@ -3,6 +3,12 @@
 {% block title %}Hello post details{% endblock %}
 
 {% block body %}
-    {{ post.id }}
-    {{ post.title }}
+    <div>
+        {{ post.id }}
+        {{ post.title }}
+    </div>
+    
+    <div>
+        <img src="/uploads/{{ post.image }}" alt="{{ post.title }}" width="200">
+    </div>
 {% endblock %}
