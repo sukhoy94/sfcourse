@@ -6,6 +6,7 @@ use App\Entity\Post;
 use App\Form\PostType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -43,6 +44,19 @@ class PostController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted()) {
+            /** @var UploadedFile $file */
+            $file = $request->files->get('post')['image'];
+            
+            if ($file) {
+                $fileName = md5(uniqid()) . '.' . $file->guessClientExtension();
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $fileName
+                );
+                
+                $post->setImage($fileName);
+            }
+            
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($post);
             $entityManager->flush();
