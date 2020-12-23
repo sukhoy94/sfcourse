@@ -56,7 +56,7 @@ class PostController extends AbstractController
                 
                 $post->setImage($fileName);
             }
-            
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($post);
             $entityManager->flush();
