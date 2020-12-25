@@ -3,10 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Form\RegisterType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,44 +20,19 @@ class RegistrationController extends AbstractController
      */
     public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
-        $form = $this->createFormBuilder()
-            ->add('username')
-            ->add('password', RepeatedType::class, [
-                'type' => PasswordType::class,
-                'invalid_message' => 'The password fields must match.',
-                'options' => ['attr' => ['class' => 'password-field']],
-                'required' => true,
-                'first_options'  => ['label' => 'Password'],
-                'second_options' => ['label' => 'Repeat Password'],
-            ])
-            ->add('register', SubmitType::class, [
-                'attr' => [
-                    'class' => 'btn btn-success',
-                ],
-            ])
-            ->getForm();
-        
-        
-        $form->handleRequest($request);
+        $user = new User();
+        $form = $this->createForm(RegisterType::class, $user);
+        $form->handleRequest($request);       
         
         if ($form->isSubmitted()) {
-            $data = $form->getData();
+            $user = new User();            
             
-            // create user object
-            $user = new User();
-            
-            // set username
-            $user->setUsername($data['username']);
-            
-            // set encoded password
+            $user->setUsername($form->getData()->getUsername());            
             $user->setPassword(
-                $passwordEncoder->encodePassword($user, $data['password'])
-            );
-    
-            // get entity manager
+                $passwordEncoder->encodePassword($user, $form->getData()->getPassword())
+            );    
             $em = $this->getDoctrine()->getManager();
             
-            // save user to database
             $em->persist($user);
             $em->flush();
             
@@ -68,7 +41,6 @@ class RegistrationController extends AbstractController
         }
         
         return $this->render('registration/index.html.twig', [
-            'controller_name' => 'RegistrationController',
             'form' => $form->createView(),
         ]);
     }
