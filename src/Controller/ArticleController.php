@@ -36,12 +36,7 @@ class ArticleController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
-            $formData = $form->getData();
-            $article = new Article();
-
-            $article->setAuthorName($this->getUser()->getUsername());
-            $article->setTitle($formData['title']);
-            $article->setBody($formData['body']);
+            $article = $form->getData();
             $article->setCreatedAt(new \DateTime());
             
             $em = $this->getDoctrine()->getManager();
