@@ -30,6 +30,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{ path('articles.create') }}">Add article</a>
+                    <a class="dropdown-item" href="{{ path('articles.list') }}">List</a>
                 </div>
             </li>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}

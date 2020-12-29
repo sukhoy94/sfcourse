@@ -4,9 +4,13 @@
 namespace App\Controller;
 
 
+use App\Entity\Article;
 use App\Form\ArticleFormType;
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Date;
 
 
 /**
@@ -26,12 +30,41 @@ class ArticleController extends AbstractController
      * @route("/create", name=".create")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $form = $this->createForm(ArticleFormType::class);
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+            $formData = $form->getData();
+            $article = new Article();
+
+            $article->setAuthorName($this->getUser()->getUsername());
+            $article->setTitle($formData['title']);
+            $article->setBody($formData['body']);
+            $article->setCreatedAt(new \DateTime());
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($article);
+            $em->flush();
+        }
+        
     
         return $this->render('articles/create.html.twig', [
             'articleForm' => $form->createView(),
         ]);
-    }    
+    }
+    
+    /**
+     * @param ArticleRepository $repository
+     * @route("/list", name=".list")
+     */
+    public function list(ArticleRepository $repository) 
+    {
+        $articles = $repository->findAll();
+        
+        return $this->render('articles/list.html.twig', [
+            'articles' => $articles,
+        ]);
+    }
 }

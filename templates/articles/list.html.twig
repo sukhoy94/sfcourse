@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List of articles{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">body</th>
+            <th scope="col">author</th>
+            <th scope="col">created at</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <th scope="row">{{ article.id }}</th>
+                <td>{{ article.title|e }}</td>
+                <td>{{ article.body|e }}</td>
+                <td>{{ article.authorname|e }}</td>
+                <td>{{ article.createdat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <ul>
+
+    </ul>
+{% endblock %}
