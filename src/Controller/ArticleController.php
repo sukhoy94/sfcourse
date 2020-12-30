@@ -37,8 +37,7 @@ class ArticleController extends AbstractController
         
         if ($form->isSubmitted() && $form->isValid()) {
             $article = $form->getData();
-            $article->setCreatedAt(new \DateTime());
-            
+ 
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
